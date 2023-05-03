@@ -132,9 +132,9 @@ RLIxm0m0bI9hFx7kdr0NiUj9owqV6TvTQRSckud9AoGBAMzlIGTvfjiY7jfLI/LN
 DtyNO/rRBtU9rZ7AAsYkXsckXT0bFR/OtKvJXBb0TROSqfeTBopoad3j1KPXI7qh
 b7NgkUwavdjmOqQ1J/n9QUHh+yXZyfFkM/IkXREz8aist4afvcVYeEvc1ZiYQvOs
 vAvU2uvodx8bye1cPk8s+O6E -----END PRIVATE KEY-----',
-      REGISTRY_URL='https://registry.lab.gaia-x.eu/development',
-      BASE_URL='http://localhost:3000/',
-      BASE_URI='http://localhost:3000/',
+      REGISTRY_URL='http://localhost:3000/',
+      BASE_URL='http://localhost:3001/',
+      BASE_URI='http://localhost:3001/',
       APP_PATH=''
     }
   }
