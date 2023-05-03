@@ -38,7 +38,7 @@ resource "grid_deployment" "d1" {
 
   vms {
     name       = "gxregistry"
-    flist      = ""
+    flist      = "https://hub.grid.tf/geertmachtelinckx.3bot/registry.gitlab.com-gaia-x-lab-compliance-gx-registry-latest.flist"
     entrypoint = "/sbin/zinit init"
     publicip   = true
     planetary  = true
@@ -51,12 +51,20 @@ resource "grid_deployment" "d1" {
     }
 
     env_vars = {
-      SSH_KEY                     = file("~/.ssh/id_rsa.pub"),
-      PRESEARCH_REGISTRATION_CODE = "",
-      PRESEARCH_BACKUP_PRI_KEY = 
+      MONGO_HOST=cluster0.dpuol65.mongodb.net,
+      MONGO_PORT=27017,
+      NODE_ENV=production,
+      PORT=3002,
+      BASE_URI=http://localhost:3001,
+      BASE_URL=http://localhost:3001,
+      DB_USERNAME=mongoadmin,
+      DB_PASSWORD=z4NHKfAmfVVzPVjc,
+      MONGO_DATABASE=trust-anchor-registry
     }
   }
 }
+
+
 
 
 # Print deployment info
