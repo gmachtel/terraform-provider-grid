@@ -7,7 +7,10 @@ terraform {
 }
 
 provider "grid" {
+  mnemonics = "aisle boring weekend scrub weapon vivid pass that amount negative entire usage" 
+    network = "test"
 }
+
 locals {
   solution_type = "Gaia-X Registry"
   name          = "mygxregistry"
@@ -16,18 +19,18 @@ locals {
 
 resource "grid_network" "net1" {
   solution_type = local.solution_type
-  name          = local.name
-  nodes         = [8]
+  name          = "gxnetwork"
+  nodes         = [1]
   ip_range      = "10.1.0.0/16"
-  description   = "newer network"
+  description   = "mygxnetwork"
   add_wg_access = true
 }
 
 # Deployment specs
 resource "gx_registry" "d1" {
   solution_type = local.solution_type
-  name          = local.name
-  node          = 8
+  name          = "registry"
+  node          = 1
   network_name  = grid_network.net1.name
 
   disks {
